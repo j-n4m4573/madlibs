@@ -19,11 +19,12 @@ inserts = ["adjective: ","noun: ","noun: ","verb: ","noun: ","verb: ","verb: "]
 verseNumbers = ["firstVerse","SecondVerse","ThirdVerse","FourthVerse",]
 index = 0
 
-
 def inputText(index):
-    print("{}{}".format(fullText[index], addBlank))
-    verseNumbers[index] = input("{} ".format(inserts[index]))
-    print("{} {}".format(fullText[index], verseNumbers[index]))
+    while index < len(fullText):
+        print("{}{}".format(fullText[index], addBlank))
+        verseNumbers[index] = input("{} ".format(inserts[index]))
+        print("{} {}".format(fullText[index], verseNumbers[index]))
+        index += 1
 
 def insertText():
     firstText = "Jack and Jill Went ___"
@@ -38,11 +39,12 @@ def insertText():
     print(thirdVerse)
     thirdVerse = input("noun: ")
     print("{}{}".format(thirdText[0:len(thirdText) - 3], thirdVerse))
-    index += 1
 
 def firstRun():
     inputText(index)
-    firstRun()
+
+# while index > len(fullText):
+firstRun()
 
 
 
