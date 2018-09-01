@@ -20,7 +20,7 @@ verseNumbers = ["firstVerse","SecondVerse","ThirdVerse","FourthVerse",]
 index = 0
 
 def inputText(index):
-    while index < len(fullText):
+    while index < (len(fullText) - 1):
         print("{}{}".format(fullText[index], addBlank))
         verseNumbers[index] = input("{} ".format(inserts[index]))
         print("{} {}".format(fullText[index], verseNumbers[index]))
