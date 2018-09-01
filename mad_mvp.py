@@ -12,7 +12,6 @@
 #        print entire statement.
 # '''
 
-
 fullText = ["Jack and Jill Went", "the hill To fetch a", "of"
  "Jack  down", "And broke his", "And Jill", " after."]
 addBlank = " ____"
@@ -20,32 +19,54 @@ inserts = ["adjective: ","noun: ","noun: ","verb: ","noun: ","verb: ","verb: "]
 verseNumbers = ["firstVerse","SecondVerse","ThirdVerse","FourthVerse",]
 index = 0
 
-while index <= len(fullText):
-    def inputText(index):
-        print("{}{}".format(fullText[index], addBlank))
-        verseNumbers[index] = input("{} ".format(inserts[index]))
-        print("{} {}".format(fullText[index], verseNumbers[index]))
 
+def inputText(index):
+    print("{}{}".format(fullText[index], addBlank))
+    verseNumbers[index] = input("{} ".format(inserts[index]))
+    print("{} {}".format(fullText[index], verseNumbers[index]))
 
-    def insertText():
-        firstText = "Jack and Jill Went ___"
-        print(firstText)
-        firstVerse = input("Adjective: ")
-        print("{}{}".format(firstText[0:len(firstText) - 3], firstVerse))
-        secondText = "the hill to fetch a ___"
-        print(secondText)
-        secondVerse = input("noun: ")
-        print("{}{}".format(secondText[0:len(secondText) - 3], secondVerse))
-        thirdText = "of ___"
-        print(thirdVerse)
-        thirdVerse = input("noun: ")
-        print("{}{}".format(thirdText[0:len(thirdText) - 3], thirdVerse))
-        index += 1
+def insertText():
+    firstText = "Jack and Jill Went ___"
+    print(firstText)
+    firstVerse = input("Adjective: ")
+    print("{}{}".format(firstText[0:len(firstText) - 3], firstVerse))
+    secondText = "the hill to fetch a ___"
+    print(secondText)
+    secondVerse = input("noun: ")
+    print("{}{}".format(secondText[0:len(secondText) - 3], secondVerse))
+    thirdText = "of ___"
+    print(thirdVerse)
+    thirdVerse = input("noun: ")
+    print("{}{}".format(thirdText[0:len(thirdText) - 3], thirdVerse))
+    index += 1
 
 def firstRun():
     inputText(index)
+    firstRun()
 
-firstRun()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
