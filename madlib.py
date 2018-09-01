@@ -12,19 +12,21 @@
 #        print entire statement.
 # '''
 
-fullText = ["Jack and Jill Went", "the hill To fetch a", "of"
+fullText = ["Jack and Jill Went", "the hill To fetch a", " of",
  "Jack  down", "And broke his", "And Jill", " after."]
 addBlank = " ____"
 inserts = ["adjective: ","noun: ","noun: ","verb: ","noun: ","verb: ","verb: "]
-verseNumbers = ["firstVerse","SecondVerse","ThirdVerse","FourthVerse",]
+verseNumbers = ["firstVerse","secondVerse","thirdVerse","fourthVerse","fifthVerse",\
+ "sixthVerse", "seventhVerse"]
 index = 0
 
 def inputText(index):
-    while index < (len(fullText) - 1):
+    while index <= (len(fullText) - 1):
         print("{}{}".format(fullText[index], addBlank))
         verseNumbers[index] = input("{} ".format(inserts[index]))
         print("{} {}".format(fullText[index], verseNumbers[index]))
         index += 1
+        print(index)
 
 def insertText():
     firstText = "Jack and Jill Went ___"
