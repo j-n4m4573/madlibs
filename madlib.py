@@ -12,8 +12,10 @@
 #        print entire statement.
 # '''
 
-fullText = ["Jack and Jill Went", "the hill To fetch a", "of",
- "Jack  down", "And broke his", "And Jill", " after."]
+import fullText
+
+# fullText = ["Jack and Jill Went", "the hill To fetch a", "of",
+#  "Jack  down", "And broke his", "And Jill", " after."]
 addBlank = " ____"
 inserts = ["adjective: ","noun: ","noun: ","verb: ","noun: ","verb: ","verb: "]
 verseNumbers = ["firstVerse","secondVerse","thirdVerse","fourthVerse","fifthVerse",\
@@ -25,6 +27,9 @@ def inputText(index):
         print("{}{}".format(fullText[index], addBlank))
         verseNumbers[index] = input("{} ".format(inserts[index]))
         print("{} {}".format(fullText[index], verseNumbers[index]))
+        if len(fullText) - 1 == index:
+            for verse in fullText:
+                print(verse)
         index += 1
 
 def insertText():
@@ -46,6 +51,7 @@ def firstRun():
 
 # while index > len(fullText):
 firstRun()
+
 
 
 
